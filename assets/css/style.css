@@ -460,7 +460,7 @@ p {
   }
 }
 
-span {
+.love {
   position: absolute;
   background: url(../images/heart.png);
   pointer-events: none;
@@ -488,9 +488,18 @@ span {
 .beautiful-women .women-center h2 {
   padding: 1rem 0;
 }
-.beautiful-women .col-md-4.col-12 {
-  display: flex;
-  justify-content: center;
+.beautiful-women .women-center p {
+  animation-delay: 0.5s;
+}
+.beautiful-women .women-center .women__ele {
+  background: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 5px 0px 0px #f5fcde;
+  -moz-box-shadow: 10px 5px 0px 0px #f5fcde;
+  box-shadow: 10px 5px 0px 0px #f5fcde;
+}
+.beautiful-women .women-center .women__ele p {
+  padding: 2rem;
 }
 .beautiful-women .card {
   margin: 1rem 0;
@@ -506,7 +515,7 @@ span {
 @keyframes love {
   0% {
     transform: translate(-50%, -50%);
-    opacity: 0.8;
+    opacity: 0.6;
   }
   100% {
     transform: translate(-50%, -1000%);

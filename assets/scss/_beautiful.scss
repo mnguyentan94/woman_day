@@ -1,4 +1,4 @@
-span {
+.love {
   position: absolute;
   background: url(../images/heart.png);
   pointer-events: none;
@@ -28,11 +28,20 @@ span {
     & h2 {
       padding: 1rem 0;
     }
+    & p {
+      animation-delay: 0.5s;
+    }
+    & .women__ele {
+      background: $white;
+      border-radius: 20px;
+
+      @include box-shadow(10px 5px 0px 0px rgb(245, 252, 222));
+      & p {
+        padding: 2rem;
+      }
+    }
   }
-  & .col-md-4.col-12 {
-    display: flex;
-    justify-content: center;
-  }
+
   & .card {
     margin: 1rem 0;
     @include box-shadow(14px 1px 5px 5px rgb(192, 182, 182));
@@ -45,7 +54,7 @@ span {
 @keyframes love {
   0% {
     transform: translate(-50%, -50%);
-    opacity: 0.8;
+    opacity: 0.6;
   }
   100% {
     transform: translate(-50%, -1000%);
