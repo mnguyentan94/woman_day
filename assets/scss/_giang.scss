@@ -106,7 +106,6 @@ $breakpoints: (
 
         p {
             padding: 0 35px;
-            text-align: center;
         }
     }
 
@@ -189,7 +188,6 @@ $breakpoints: (
 
         p {
             padding: 0 35px;
-            text-align: center;
         }
     }
 
@@ -349,7 +347,7 @@ $breakpoints: (
 
             @include respond-to('tablet-and-down') {
                 width: 300px;
-                height: 300px;
+                height: 270px;
             }
             @include respond-to('smallphone-and-down') {
                 width: 200px;
@@ -399,8 +397,8 @@ $breakpoints: (
 
     .img-container {
         position: relative;
-        top: 30px;
-        right: -150px;
+        top: 10px;
+        right: -85px;
         @include respond-to('smallphone-and-down') {
             top: 12px;
             right: -80px;
