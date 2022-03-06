@@ -1,8 +1,8 @@
 /*Responsive*/
 $breakpoints: (
-  smallphone-and-down: '(max-width: 399px)',
+  smallphone-and-down: '(max-width: 391px)',
   phone-and-down: '(max-width: 575px)',
-  tablet-and-down: '(max-width: 767px)',
+  tablet-and-down: '(max-width: 769px)',
   desktop-and-down: '(max-width: 991px)',
   largedesktop-and-down: '(max-width: 1199px)',
   extralarge-and-down: '(max-width: 1439px)',
@@ -32,8 +32,20 @@ $breakpoints: (
     align-items: center;
     height: 650px;
 
+    @include respond-to('tablet-and-down') {
+        width: 100%;
+    }
+
     @include respond-to('smallphone-and-down') {
        width: 100%;
+    }
+
+    img {
+        transition: ease-in-out 0.5s;
+    }
+
+    img:hover {
+        transform: scale(1.05);
     }
 }
 
@@ -56,6 +68,7 @@ $breakpoints: (
         top: -40px;
         left: 20px;
         box-shadow: 20px 20px 10px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
 
         @include respond-to('smallphone-and-down') {
             top: 0px;
@@ -77,6 +90,11 @@ $breakpoints: (
         align-items: center;
         text-align: center;
 
+        @include respond-to('tablet-and-down') {
+            width: 350px;
+            height: 350px;
+        }
+
         @include respond-to('smallphone-and-down') {
             height: 300px;
          }
@@ -97,12 +115,18 @@ $breakpoints: (
     }
 
     img {
+        border-radius: 8px;
         width: 500px;
         height: 500px;
         object-fit: cover;
         position: relative;
         top: 30px;
         right: 0px;
+
+        @include respond-to('tablet-and-down') {
+            width: 300px;
+            height: 300px;
+        }
         @include respond-to('smallphone-and-down') {
             width: 200px;
             height: 200px;
@@ -117,10 +141,17 @@ $breakpoints: (
     background-color: #f9e79b;
 
     .wrapper-inner {
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
         flex-direction: row-reverse;
         background-color: #f1c50e;
+        @include respond-to('tablet-and-down') {
+            width: 80vw;
+        }
         @include respond-to('smallphone-and-down') {
             flex-direction: column;
+            width: auto;
+            margin: 0 10px;
          }
     }
 
@@ -166,8 +197,13 @@ $breakpoints: (
         position: absolute;
         top: 50px;
         left: -50px;
+
+        @include respond-to('tablet-and-down') {
+            top: 95px;
+            left: -50px;
+        }
         @include respond-to('smallphone-and-down') {
-            top: 10px;
+            top: 15px;
             left: 0px;
             position: relative;
             box-shadow: 0px 0px 5px 1px rgba(0, 0, 0,  0.5);
@@ -176,9 +212,14 @@ $breakpoints: (
     }
 
     img {
+        border-radius: 10px;
         width: 400px;
         height: 400px;
         object-fit: cover;
+        @include respond-to('tablet-and-down') {
+            width: 300px;
+            height: 300px;
+        }
         @include respond-to('smallphone-and-down') {
             width: 200px;
             height: 200px;
@@ -196,6 +237,10 @@ $breakpoints: (
      }
 
      .container-right {
+        @include respond-to('tablet-and-down') {
+            position: relative;
+            top: 30px;
+        }
         @include respond-to('smallphone-and-down') {
             position: relative;
             top: 38px;
@@ -203,17 +248,24 @@ $breakpoints: (
      }
 
     .wrapper-inner {
+        @include respond-to('tablet-and-down') {
+            flex-direction: column;
+        }
         @include respond-to('smallphone-and-down') {
             flex-direction: column;
          }
     }
 
     .img-container {
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0,  0.5);
         padding: 20px 20px 1px 20px;
         background-color: #ffffff;
         transform: rotate(10deg);
         width: 450px;
         border-radius: 5px;
+        @include respond-to('tablet-and-down') {
+            width: 342px;
+        }
         @include respond-to('smallphone-and-down') {
             width: 240px;
          }
@@ -231,8 +283,15 @@ $breakpoints: (
             margin-bottom: 20px;
         }
 
+        @include respond-to('tablet-and-down') {
+            transform: rotate(0deg);
+            left: 0;
+            margin: 0 20px;
+        }
+
         @include respond-to('smallphone-and-down') {
             left: 0;
+            top: 15px;
             width: 300px;
          }
     }
@@ -251,6 +310,10 @@ $breakpoints: (
 
     img {
         object-fit: cover;
+        @include respond-to('tablet-and-down') {
+            width: 300px;
+            height: 300px;
+        }
         @include respond-to('smallphone-and-down') {
             width: 200px;
             height: 200px;
@@ -283,6 +346,15 @@ $breakpoints: (
             border-radius: 50%;
             box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
             object-fit: cover;
+
+            @include respond-to('tablet-and-down') {
+                width: 300px;
+                height: 300px;
+            }
+            @include respond-to('smallphone-and-down') {
+                width: 200px;
+                height: 200px;
+            }
         }
     }
 
@@ -310,6 +382,12 @@ $breakpoints: (
         background-color: #ffffff;
         border-radius: 10px;
         padding: 20px;
+        @include respond-to('tablet-and-down') {
+            margin: 0 20px;
+        }
+        @include respond-to('smallphone-and-down') {
+            margin: 0;
+         }
     }
 
     .info {
@@ -334,6 +412,12 @@ $breakpoints: (
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+
+            @include respond-to('tablet-and-down') {
+                width: 300px;
+                height: 300px;
+            }
+
             @include respond-to('smallphone-and-down') {
                 width: 200px;
                 height: 200px;
