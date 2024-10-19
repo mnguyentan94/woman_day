@@ -8,8 +8,15 @@
     <title>Happy Woman Day</title>
     <link rel="icon" href="https://i.pinimg.com/564x/56/11/1e/56111e44a5c6c689ba7f1fcceb5df3df.jpg" sizes="32x32" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff69b4;
+        }
+    </style>
 </head>
 
 <body>
@@ -35,20 +42,15 @@
     <section class="khanh-thuy-hien">
         <div class="container">
             <div class="row">
-                <div class="khanh-thuy-hien__img col-12 col-md-6 d-flex align-item-center wow bounceInLeft" data-wow-delay="1s">
+                <div class="khanh-thuy-hien__img col-12 col-md-6 d-flex align-item-center">
                     <img src="./assets/images/hathiankhanh.jpg" class="img-fluid" alt="ha-thi-an-khanh" />
                 </div>
-                <div class="khanh-thuy-hien__card col-12 col-md-6 d-flex align-items-end wow bounceInDown">
+                <div class="khanh-thuy-hien__card col-12 col-md-6 d-flex align-items-end">
                     <div class="card shadow">
                         <div class="card-body">
                             <h5 class="card-title">Hà Thị An Khanh</h5>
-                            <span class="card-text">
-                                Gửi cô nàng QA An Khanh nè, <br> Hôm nay là ngày 8/3, là ngày của chị em hội phụ nữ, 
-                                chắc chắn sẽ không thể quên được cô nàng QA đáng yêu của team EDU đúng không. 
-                                Nhân dịp đặc biệt này, mình xin thay mặt anh em thiên địa hội chúc Khanh có một ngày 
-                                mùng 8/3 thật tuyệt vời, sức khỏe thật dồi dào và sự nghiệp sẽ ngày một thăng tiến nha.
-                                <br> Thân gửi.
-                            </span>
+                            <button onclick="showMessage()" class="btn btn-primary">Xem Lời Chúc</button>
+                            <p id="message">Gửi cô nàng QA An Khanh nè! Hôm nay là ngày 8/3, là ngày của chị em hội phụ nữ, vậy chắc chắn sẽ không thể quên được cô nàng QA đáng yêu của team EDU. Chúc Khanh có một ngày mùng 8/3 thật tuyệt vời, sức khỏe thật dồi dào và sự nghiệp sẽ ngày một thăng tiến nha. Thân gửi.</p>
                         </div>
                     </div>
                 </div>
@@ -60,9 +62,16 @@
         <p>&copy; 2024 Happy Women's Day</p>
     </footer>
 
-    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        function showMessage() {
+            var message = document.getElementById("message");
+            if (message.style.display === "none") {
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
