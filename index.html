@@ -8,7 +8,21 @@
     <title>Happy Woman Day</title>
     <link rel="icon" href="https://i.pinimg.com/564x/56/11/1e/56111e44a5c6c689ba7f1fcceb5df3df.jpg" sizes="32x32" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .heart-btn {
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            color: #ff69b4;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .heart-btn:hover {
+            color: #e60073;
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -27,13 +41,11 @@
         </div>
     </header>
 
-    <section class="banner wow bounceInDown">
-        <img class="banner__image" src="assets/images/banner2.jpg" alt="Banner">
-    </section>
-
     <section class="khanh-thuy-hien">
         <div class="container text-center">
-            <button onclick="redirectPage()" class="btn btn-primary">Xem Lời Chúc</button>
+            <button onclick="redirectPage()" class="btn btn-primary heart-btn">
+                ❤️ Click
+            </button>
         </div>
     </section>
 
@@ -49,4 +61,5 @@
 </body>
 
 </html>
+
 
